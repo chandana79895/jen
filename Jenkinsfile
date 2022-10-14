@@ -17,6 +17,10 @@ pipeline {
            pulumi stack select "${PULUMI_STACK}"
            pulumi config set aws:region us-east-1
            aws s3 ls
+           aws configure
+           Access Key ID: AKIAR6ZLIUHQY6M7K7XA
+           AWS Secret Access Key: 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
+           Default region name: us-east-1
            pulumi up --yes
         '''
       }
