@@ -16,6 +16,7 @@ pipeline {
         sh '''
            pulumi stack select "${PULUMI_STACK}"
            pulumi config set aws:region us-east-1
+           aws s3 ls
            pulumi up --yes
         '''
       }
